@@ -6,10 +6,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.unsplashapp.common.NetworkResponse
 import com.example.unsplashapp.domain.use_case.SearchPhotoUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
+@HiltViewModel
 class SearchPhotosViewModel @Inject constructor(
     private val searchPhotosUseCase: SearchPhotoUseCase
 ) : ViewModel() {
